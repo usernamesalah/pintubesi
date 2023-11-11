@@ -5,6 +5,7 @@ class Login extends MY_Controller
     public function __construct()
     {
         parent::__construct();
+		$this->load->library("ci_jwt");
         $this->data['token'] = $this->session->userdata('token');
 
         if (isset($this->data['token'])) {

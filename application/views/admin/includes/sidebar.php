@@ -49,7 +49,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
+                        <a class="sidebar-link" href="<?= base_url('admin/client') ?>" aria-expanded="false">
                             <span>
                                 <i class="ti ti-building"></i>
                             </span>
@@ -62,7 +62,7 @@
                         <span class="hide-menu">Pengaturan</span>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
+                        <a class="sidebar-link" href="<?= base_url('admin/foto_depan')?>" aria-expanded="false">
                             <span>
                                 <i class="ti ti-photo"></i>
                             </span>

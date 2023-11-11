@@ -13,20 +13,20 @@ class Admin extends MY_Controller
         parent::__construct();
         $this->module = 'admin';
 
-        // $this->load->library('ci_jwt');
-        // $access_token = $this->session->userdata('token');
-        // if (!isset($access_token)) {
-        //     redirect('login/admin');
-        //     exit;
-        // }
+        $this->load->library('ci_jwt');
+        $access_token = $this->session->userdata('token');
+        if (!isset($access_token)) {
+            redirect('login/admin');
+            exit;
+        }
 
-        // $token = $this->ci_jwt->decode($access_token);
-        // if (!isset($token->username)) {
-        //     redirect('login/admin');
-        //     exit;
-        // }
+        $token = $this->ci_jwt->decode($access_token);
+        if (!isset($token->username)) {
+            redirect('login/admin');
+            exit;
+        }
 
-        // $this->admin = $token;
+        $this->admin = $token;
         $this->load->library("Tanggal");
     }
 
@@ -163,6 +163,31 @@ class Admin extends MY_Controller
         $this->data['product'] = $this->Client_m->get();
         $this->data['title'] = 'Client';
         $this->data['content'] = 'client';
+        $this->template($this->data, $this->module);
+    }
+
+    
+    public function foto_depan()
+    {
+        if ( $this->POST('simpan') )
+        {
+            if ( count($_FILES['photos']) > 0 )
+            {
+                $name = $this->multiple_upload('home', 'photos');
+                foreach ($name as $value) {
+                    $this->Home_image_m->insert([
+                        "url" => "/assets/upload/home/" .$value
+                    ]);
+                }
+            }
+
+            $this->flashmsg('Success Save Foto', 'success');
+            redirect('admin/foto-depan');
+            exit;
+        }
+        $this->data['photos'] = $this->Home_image_m->get();
+        $this->data['title'] = 'alamat';
+        $this->data['content'] = 'foto_depan';
         $this->template($this->data, $this->module);
     }
 }

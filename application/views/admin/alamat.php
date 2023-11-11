@@ -4,6 +4,7 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title fw-semibold mb-4">Alamat Kantor</h5>
+    <?= $this->session->flashdata('msg') ?>
             <?= form_open('admin/alamat') ?>
             <div class="mb-3">
                 <textarea name="alamat" class="form-control" id="ttg"><?= $alamat->value ?></textarea>

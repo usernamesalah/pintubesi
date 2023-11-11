@@ -2,6 +2,7 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title fw-semibold mb-4">WhatsApp Pemesanan</h5>
+    <?= $this->session->flashdata('msg') ?>
             <?= form_open('admin/whatsapp') ?>
             <div class="mb-3">
                 <input type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
