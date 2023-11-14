@@ -17,8 +17,13 @@
                                 </p>
                             </div>
                             <div class="card-body text-end">
+
+                                <a href="<?= base_url('admin/product/delete') . "/" . $product->id ?>"
+                                    class="btn btn-outline-danger btn-sm">
+                                    <i class="ti ti-trash"></i></a>
                                 <a href="<?= base_url('admin/product/detail') . "/" . $product->id ?>"
-                                    class="pull-right card-link">Detail</a>
+                                    class="btn btn-outline-primary btn-sm">
+                                    <i class="ti ti-eye"></i></a>
                             </div>
                         </div>
                     </div>

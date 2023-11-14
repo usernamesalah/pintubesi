@@ -15,13 +15,15 @@ class Admin extends MY_Controller
 
         $this->load->library('ci_jwt');
         $access_token = $this->session->userdata('token');
-        if (!isset($access_token)) {
+        if ( !isset($access_token) )
+        {
             redirect('login/admin');
             exit;
         }
 
         $token = $this->ci_jwt->decode($access_token);
-        if (!isset($token->username)) {
+        if ( !isset($token->username) )
+        {
             redirect('login/admin');
             exit;
         }
@@ -114,8 +116,9 @@ class Admin extends MY_Controller
             if ( count($_FILES['galery']) > 0 )
             {
                 $name = $this->multiple_upload('product', 'galery');
-                foreach ($name as $value) {
-                    $galery[] = "/assets/upload/product/" .$value;
+                foreach ($name as $value)
+                {
+                    $galery[] = "/assets/upload/product/" . $value;
                 }
             }
             $data = [
@@ -138,12 +141,11 @@ class Admin extends MY_Controller
             ];
 
             $this->Product_m->insert($data);
-            $this->flashmsg('Success Save alamat', 'success');
+            $this->flashmsg('Success Save product', 'success');
             redirect('admin/product');
             exit;
         }
-        $this->data['alamat'] = $this->Setting_m->get_row(['index' => 'alamat']);
-        $this->data['title'] = 'alamat';
+        $this->data['title'] = 'Product';
         $this->data['content'] = 'tambah_product';
         $this->template($this->data, $this->module);
     }
@@ -156,17 +158,71 @@ class Admin extends MY_Controller
         $this->data['content'] = 'product';
         $this->template($this->data, $this->module);
     }
+    public function detail_product($id)
+    {
+        if ( !isset($id) )
+        {
+            $this->flashmsg('Product tidak ditemukan', 'danger');
+            redirect('admin/product');
+            exit;
+        }
 
+        $this->data['product'] = $this->Product_m->get_row(['id' => $id]);
+        $this->data['title'] = 'product';
+        $this->data['content'] = 'detail_product';
+        $this->template($this->data, $this->module);
+    }
 
+    public function delete_product($id)
+    {
+        if ( !isset($id) )
+        {
+            $this->flashmsg('Product tidak ditemukan', 'danger');
+            redirect('admin/product');
+            exit;
+        }
+
+        $this->Product_m->delete($id);
+        $this->flashmsg('Product telah di hapus', 'success');
+        redirect('admin/product');
+        exit;
+    }
     public function client()
     {
-        $this->data['product'] = $this->Client_m->get();
+        if($this->POST('create')){
+            $image_url = $this->__generate_random_id();
+            $this->upload($image_url , "client" , 'foto');
+            $data = [
+                "nama" => $this->POST('nama'),
+                "detail" => $this->POST('detail'),
+                "image" => "client/" . $image_url . ".jpg"
+            ];
+            $this->Client_m->insert($data);
+            $this->flashmsg('Client Berhasil ditambah', 'success');
+            redirect('admin/client');
+            exit;
+        }
+        $this->data['clients'] = $this->Client_m->get();
         $this->data['title'] = 'Client';
         $this->data['content'] = 'client';
         $this->template($this->data, $this->module);
     }
 
-    
+    public function delete_client($id)
+    {
+        if ( !isset($id) )
+        {
+            $this->flashmsg('Client tidak ditemukan', 'danger');
+            redirect('admin/client');
+            exit;
+        }
+
+        $this->Client_m->delete($id);
+        $this->flashmsg('Client telah di hapus', 'success');
+        redirect('admin/client');
+        exit;
+    }
+
     public function foto_depan()
     {
         if ( $this->POST('simpan') )
@@ -174,9 +230,10 @@ class Admin extends MY_Controller
             if ( count($_FILES['photos']) > 0 )
             {
                 $name = $this->multiple_upload('home', 'photos');
-                foreach ($name as $value) {
+                foreach ($name as $value)
+                {
                     $this->Home_image_m->insert([
-                        "url" => "/assets/upload/home/" .$value
+                        "url" => "/assets/upload/home/" . $value
                     ]);
                 }
             }
