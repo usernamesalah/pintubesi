@@ -50,6 +50,12 @@
                 </div>
                 <div class="col-6 col-md-6">
                     <div class="mb-3">
+                        <span class="fw-normal">Deskripsi Singkat</span>
+                        <p class="fw-semibold mb-1">
+                            <?= $product->deskripsi ?>
+                    </p>
+                    </div>
+                    <div class="mb-3">
                         <span class="fw-normal">Ukuran</span>
                         <h6 class="fw-semibold mb-1">
                             <?= $product->ukuran ?>

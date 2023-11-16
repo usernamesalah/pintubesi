@@ -123,6 +123,7 @@ class Admin extends MY_Controller
             }
             $data = [
                 'nama' => $this->POST('nama'),
+                'deskripsi' => $this->POST('deskripsi'),
                 'kategori' => $this->POST('kategori'),
                 'ukuran' => $this->POST('ukuran'),
                 'tebal_daun_pintu' => $this->POST('tebal_daun_pintu'),

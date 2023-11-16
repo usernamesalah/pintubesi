@@ -29,6 +29,10 @@
                             <input type="text" name="kategori" class="form-control" id="exampleFormControlInput1"
                                 placeholder="kategori produk">
                         </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Deskripsi Produk</label>
+                            <textarea name="deskripsi" id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
                     </div>
                 </div>
 
