@@ -49,7 +49,7 @@
 					<h3>Produk </h3>
 				</div>
 
-				<a href="<?= base_url('produk') ?>"
+				<a href="<?= base_url('product') ?>"
 					class="button button-small button-rounded button-border button-border-thin fw-medium m-0"
 					style="position: absolute; top: 7px; right: 0;">Lihat Semua</a>
 
