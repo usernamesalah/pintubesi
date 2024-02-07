@@ -12,13 +12,15 @@
 
 							<div class="widget">
 
-								<img src="<?= base_url('assets/home') ?>/real-estate/images/logo@2x.png" style="position: relative; opacity: 0.85; left: -10px; max-height: 80px; margin-bottom: 20px;" alt="Footer Logo">
+								<img src="<?= base_url('assets') ?>/logo.png" style="position: relative; opacity: 0.85; left: -10px; max-height: 80px; margin-bottom: 20px;" alt="Footer Logo">
 
-								<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards with a Retina &amp; Responsive Approach. Browse the amazing Features this template offers.</p>
-
+								<p>
+									<strong>STEEL FIRE DOOR</strong> produksi <strong>PT Guna Cahaya Teknik</strong> akan memenuhi kebutuhan keamanan Ruangan dalam berbagai Fungsi.
+								Dalam dunia Arsitek perlunya penggunaan Steel Fire Door adalah sebagai Akses keadaan darurat ataupun Keamanan suatu ruangan dari hal kejadian yang tidak diinginkan salah satunya adalah kebakaran
+								</p>
 								<div class="line" style="margin: 30px 0;"></div>
 
-								<p class="ls-1 fw-light" style="opacity: 0.6; font-size: 13px;">Copyrights &copy; 2023 Canvas: Real Estate</p>
+								<p class="ls-1 fw-light" style="opacity: 0.6; font-size: 13px;">Copyrights &copy; <?= date('Y') ?> <strong>PT Guna Cahaya Teknik</strong></p>
 
 							</div>
 
@@ -29,7 +31,7 @@
 							<div class="row col-mb-50">
 								<div class="col-md-6">
 								</div>
-
+<!-- 
 								<div class="col-md-6">
 									<h4 class="ls-1 fw-normal text-uppercase">Connect Socially</h4>
 
@@ -72,7 +74,7 @@
 											<button class="button button-3d button-black mx-0" style="margin-top: 15px;" type="submit">Subscribe</button>
 										</form>
 									</div>
-								</div>
+								</div> -->
 							</div>
 
 						</div>

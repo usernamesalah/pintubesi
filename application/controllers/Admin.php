@@ -17,14 +17,14 @@ class Admin extends MY_Controller
         $access_token = $this->session->userdata('token');
         if ( !isset($access_token) )
         {
-            redirect('login/admin');
+            redirect('login');
             exit;
         }
 
         $token = $this->ci_jwt->decode($access_token);
         if ( !isset($token->username) )
         {
-            redirect('login/admin');
+            redirect('login');
             exit;
         }
 
