@@ -14,7 +14,7 @@
 						============================================= -->
 						<div id="logo">
 							<a href="index.html">
-								<img class="logo-default" srcset="<?= base_url('assets/home') ?>/real-estate/images/logo.png, <?= base_url('assets/home') ?>/real-estate/images/logo@2x.png 2x" src="<?= base_url('assets/home') ?>/real-estate/images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-default" srcset="<?= base_url('assets') ?>/logo.png" alt="Canvas Logo" style="height:70px;">
 							</a>
 						</div><!-- #logo end -->
 

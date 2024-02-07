@@ -7,12 +7,19 @@ class Home extends MY_Controller
     public function __construct()
     {
         parent::__construct();
+
+        $this->data['whatsapp'] = $this->Setting_m->get_row(['index' => 'whatsapp']);
+
+        if (empty($this->data['whatsapp']))
+            $this->data['whatsapp']->value = "62898xxx";
     }
 
     public function index()
     {
         $this->data['products'] = $this->Product_m->get();
         $this->data['clients'] = $this->Client_m->get();
+        $this->data['home_img'] = $this->Home_image_m->get();
+
         $this->data['content'] = 'home';
         $this->data['title'] = 'Home | '.$this->title;
         $this->template($this->data ,'home');

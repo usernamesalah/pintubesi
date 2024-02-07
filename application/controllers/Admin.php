@@ -196,7 +196,7 @@ class Admin extends MY_Controller
             $data = [
                 "nama" => $this->POST('nama'),
                 "detail" => $this->POST('detail'),
-                "image" => "client/" . $image_url . ".jpg"
+                "image" => "/assets/upload/client/" . $image_url . ".jpg"
             ];
             $this->Client_m->insert($data);
             $this->flashmsg('Client Berhasil ditambah', 'success');

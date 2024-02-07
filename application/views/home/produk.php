@@ -35,7 +35,7 @@
                             <div class="entry-meta no-separator">
                                 <ul>
                                     <li class="text-end pull-right">
-                                        <a href="#" class="button button-border button-rounded button-green"><i
+                                        <a href="https://wa.me/<?= $whatsapp->value ?>?text=halo?" class="button button-border button-rounded button-green"><i
                                                 class="bi-whatsapp"></i> Pesan Sekarang</a>
 
                                     </li>

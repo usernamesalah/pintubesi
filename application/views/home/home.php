@@ -7,15 +7,17 @@
 			data-arrows="false" data-pagi="false" style="background-color: #333;">
 			<div class="flexslider">
 				<div class="slider-wrap">
+					<?php if(!empty($home_img)) : ?>
+						<?php foreach($home_img as $himg): ?>
+						<div class="slide"
+							style="background: url('<?= base_url($himg->url) ?>') center center; background-size: cover;">
+						</div>
+						<?php endforeach; ?>
+					<?php else : ?>
 					<div class="slide"
 						style="background: url('<?= base_url('assets/home') ?>/real-estate/images/hero/3.jpg') center center; background-size: cover;">
 					</div>
-					<div class="slide"
-						style="background: url('<?= base_url('assets/home') ?>/real-estate/images/hero/4.jpg') center center; background-size: cover;">
-					</div>
-					<div class="slide"
-						style="background: url('<?= base_url('assets/home') ?>/real-estate/images/hero/5.jpg') center center; background-size: cover;">
-					</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -23,10 +25,7 @@
 		<div class="vertical-middle">
 			<div class="container text-center">
 				<div class="emphasis-title m-0">
-					<h1>Your Dream Home.</h1>
-					<span class="fw-light text-uppercase"
-						style="font-size: 18px; letter-spacing: 10px; color: rgba(255,255,255,0.9);">A Few Clicks
-						Away.</span>
+					<h1>STEEL FIRE DOOR SPESIALIST</h1>
 				</div>
 			</div>
 		</div>
@@ -75,7 +74,7 @@
 								<span><?= $product->kategori ?></span>
 								<div class="line" style="margin-top: 15px; margin-bottom: 15px;"></div>
 								<div class="real-estate-item-features fw-medium font-primary text-end">
-									<a href="#" class="button button-border button-rounded button-green"><i
+									<a href="https://wa.me/<?= $whatsapp->value ?>?text=halo?" class="button button-border button-rounded button-green"><i
 											class="bi-whatsapp"></i> Pesan Sekarang</a>
 
 								</div>

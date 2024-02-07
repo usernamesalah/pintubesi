@@ -4,8 +4,16 @@
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<meta http-equiv="x-ua-compatible" content="IE=edge">
-	<meta name="author" content="SemiColonWeb">
-	<meta name="description" content="Create Real-Estate Buy, Sell &amp; Rent Websites with Canvas Template. Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+	<meta name="author" content="PT GUNA CAHAYA TEKNIK">
+	<meta name="description" content="STEEL FIRE DOOR produksi PT Guna Cahaya Teknik akan memenuhi kebutuhan keamanan Ruangan dalam berbagai Fungsi.">
+
+	<meta property="og:title" content="<?= $title ?>" />
+	<meta property="og:description" content="STEEL FIRE DOOR produksi PT Guna Cahaya Teknik akan memenuhi kebutuhan keamanan Ruangan dalam berbagai Fungsi." />
+	<meta property="og:url" content="<?= base_url() ?>">
+	<meta property="og:image" content="<?= base_url('assets/logo.png') ?>" />
+	<meta property="og:image:width" content="350" />
+	<meta property="og:image:height" content="350" />
+	<meta property="fb:app_id" content="2013042902347728" />
 
 	<!-- Font Imports -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +21,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rubik:wght@400;600&family=Lora:ital@0;1&display=swap" rel="stylesheet">
 
 	<!-- Core Style -->
+  <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/logo.png') ?>" />
 	<link rel="stylesheet" href="<?= base_url('assets/home') ?>/style.css">
 
 	<!-- Font Icons -->
@@ -33,7 +42,7 @@
 
 	<!-- Document Title
 	============================================= -->
-	<title>Pintu Besi Tahan Api</title>
+	<title>STEEL FIRE DOOR - <?= $title ?></title>
 
 </head>
 
