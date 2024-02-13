@@ -31,50 +31,12 @@
 							<div class="row col-mb-50">
 								<div class="col-md-6">
 								</div>
-<!-- 
+
 								<div class="col-md-6">
-									<h4 class="ls-1 fw-normal text-uppercase">Connect Socially</h4>
+									<h4 class="ls-1 fw-normal text-uppercase">Alamat</h4>
 
-									<div class="d-flex mb-4">
-										<a href="#" class="social-icon si-small rounded-circle text-white bg-facebook" title="Facebook">
-											<i class="fa-brands fa-facebook-f"></i>
-											<i class="fa-brands fa-facebook-f"></i>
-										</a>
-
-										<a href="#" class="social-icon si-small rounded-circle text-white bg-twitter" title="Twitter">
-											<i class="fa-brands fa-twitter"></i>
-											<i class="fa-brands fa-twitter"></i>
-										</a>
-
-										<a href="#" class="social-icon si-small rounded-circle text-white bg-instagram" title="Instagram">
-											<i class="bi-instagram"></i>
-											<i class="bi-instagram"></i>
-										</a>
-
-										<a href="#" class="social-icon si-small rounded-circle text-white bg-apple" title="App Store">
-											<i class="fa-brands fa-apple"></i>
-											<i class="fa-brands fa-apple"></i>
-										</a>
-
-										<a href="#" class="social-icon si-small rounded-circle text-white bg-android" title="Play Store">
-											<i class="fa-brands fa-android"></i>
-											<i class="fa-brands fa-android"></i>
-										</a>
-
-										<a href="#" class="social-icon si-small rounded-circle text-white bg-skype" title="Skype">
-											<i class="fa-brands fa-skype"></i>
-											<i class="fa-brands fa-skype"></i>
-										</a>
-									</div>
-
-									<div class="widget subscribe-widget subscribe-form" data-loader="button">
-										<div class="widget-subscribe-form-result"></div>
-										<form action="include/subscribe.php" method="post" class="mb-0">
-											<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control not-dark required email" placeholder="Enter your Email">
-											<button class="button button-3d button-black mx-0" style="margin-top: 15px;" type="submit">Subscribe</button>
-										</form>
-									</div>
-								</div> -->
+									<?= $alamat->value ?>
+								</div>
 							</div>
 
 						</div>

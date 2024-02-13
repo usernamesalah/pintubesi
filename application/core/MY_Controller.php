@@ -65,7 +65,7 @@ class MY_Controller extends CI_Controller
 
 		$upload_path = realpath(FCPATH . 'assets/upload/' . $directory . '/');
 		$config = [
-		 'allowed_types' => 'jpg|png|bmp|jpeg',
+		 'allowed_types' => 'jpg|png|bmp|jpeg|txt|pdf',
 		 'upload_path' => $upload_path,
 		 'max_size' => $max_size,
 		 "overwrite" => true

@@ -9,6 +9,7 @@ class Home extends MY_Controller
         parent::__construct();
 
         $this->data['whatsapp'] = $this->Setting_m->get_row(['index' => 'whatsapp']);
+        $this->data['alamat'] = $this->Setting_m->get_row(['index' => 'alamat']);
 
         if (empty($this->data['whatsapp']))
             $this->data['whatsapp']->value = "62898xxx";
@@ -50,5 +51,16 @@ class Home extends MY_Controller
         $this->data['content'] = 'product-detail';
         $this->data['title'] = 'Home | '.$this->title;
         $this->template($this->data ,'home');
+    }    
+
+    public function about()
+    {
+        $this->data['about'] = $this->Setting_m->get_row(['index' => 'tentang'])->value;
+
+
+        $this->data['content'] = 'about';
+        $this->data['title'] = 'About | '.$this->title;
+        $this->template($this->data ,'home');
     }
+
 }

@@ -31,9 +31,8 @@
 							<ul class="menu-container">
 								<li class="menu-item current"><a class="menu-link" href="<?=base_url()?>"><div>Home</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="<?= base_url('product') ?>"><div>Product</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="<?= base_url() ?>"><div>About Us</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="<?= base_url('about') ?>"><div>About Us</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="<?= base_url('home') ?>#client"><div>Client</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="<?= base_url() ?>"><div>Contact</div></a></li>
 							</ul>
 
 						</nav><!-- #primary-menu end -->

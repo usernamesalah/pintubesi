@@ -17,13 +17,17 @@
                                 </p>
                             </div>
                             <div class="card-body text-end">
-
-                                <a href="<?= base_url('admin/product/delete') . "/" . $product->id ?>"
-                                    class="btn btn-outline-danger btn-sm">
-                                    <i class="ti ti-trash"></i></a>
+                            <div class="btn-group">
                                 <a href="<?= base_url('admin/product/detail') . "/" . $product->id ?>"
                                     class="btn btn-outline-primary btn-sm">
-                                    <i class="ti ti-eye"></i></a>
+                                    <i class="ti ti-eye"></i> Detail</a>
+                                <a href="<?= base_url('admin/product/edit') . "/" . $product->id ?>"
+                                    class="btn btn-outline-success btn-sm">
+                                    <i class="ti ti-pencil"></i> Edit</a>
+                                <a href="<?= base_url('admin/product/delete') . "/" . $product->id ?>"
+                                    class="btn btn-outline-danger btn-sm" >
+                                    <i class="ti ti-trash"></i> Hapus</a>
+                            </div>
                             </div>
                         </div>
                     </div>
