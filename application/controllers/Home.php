@@ -56,10 +56,10 @@ class Home extends MY_Controller
     public function about()
     {
         $this->data['about'] = $this->Setting_m->get_row(['index' => 'tentang'])->value;
-        $docs = $this->Setting_m->get_row(['index' => 'document_pendukung'])->value;
+        $docs = $this->Setting_m->get_row(['index' => 'document_pendukung']);
         $this->data['docs'] = [];
         if (!empty($docs)) {
-            $this->data['docs'] = json_decode($docs, true);
+            $this->data['docs'] = json_decode($docs->value, true);
         }
         $this->data['content'] = 'about';
         $this->data['title'] = 'About | ' . $this->title;
