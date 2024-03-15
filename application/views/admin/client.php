@@ -5,7 +5,7 @@
             <h5 class="card-title fw-semibold mb-4">Daftar Proyek dan Client</h5>
             <div class=" text-end pull-right mb-4">
                 <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
+                    data-bs-target="#tambahClient">
                     <i class="ti ti-plus"></i> Tambah Proyek / Client
                 </button>
             </div>
@@ -33,12 +33,12 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="tambahClient" tabindex="-1" aria-labelledby="tambahClientLabel" aria-hidden="true">
     <div class="modal-dialog">
         <?= form_open_multipart('admin/client') ?>
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Proyek / Client</h5>
+                <h5 class="modal-title" id="tambahClientLabel">Tambah Proyek / Client</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
